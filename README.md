@@ -38,7 +38,7 @@ Use `nvm` or `nvm-windows` to install the latest version of `Node.js, npm and np
 ### Clone the repository
 
 ```
-git clone https://github.com/alanmosely/teatime-starter.git
+git clone https://github.com/jschappet/teatime-starter.git
 ```
 
 ### Install the dependencies
