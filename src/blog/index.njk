@@ -1,0 +1,17 @@
+---
+title: Blog Page
+layout: base.njk
+
+---
+
+<header>
+  {% include "navbar.njk" %}
+</header>
+
+<h2>Blog Page</h2>
+
+<ul>
+{%- for blog in collections.blog -%}
+  <li><a href="{{ blog.url }}">{{ blog.data.title }}</a> <br>{{ blog.data.desc }}</li>
+{%- endfor -%}
+</ul>

@@ -23,8 +23,8 @@ module.exports = {
       indigo: colors.indigo,
     },
     backgroundImage: {
-      'hero-lg': "url('../img/hero.webp')",
-      'hero-sm': "url('../img/hero-mobile.webp')",
+      'hero-lg': "url('../img/bg_head.jpg')",
+      'hero-sm': "url('../img/bg_head.jpg')",
     },
     extend: {},
   },
