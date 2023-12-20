@@ -2,7 +2,7 @@
 tags: blog 
 layout: page.njk
 title: Tools to Deepen Your Relationship
-desc: Tools to Deepen Your Relationship
+description: Tools to Deepen Your Relationship
 ---
 ## Intro 
 Stepping into the realm of relationship deepening is akin to entering a sultry dance floor, where the challenges are as tantalizing as they are rewarding. Picture a dance of communication that's not just a conversation but a seductive exchange of desires. Trust-building becomes an intoxicating tease, and conflict resolution is a heated tango of passion. In this spicy exploration, we uncover five tantalizing tools designed to set the stage on fire, promising to turn the connection between partners into a sizzling, irresistible affair. Get ready for a journey that goes beyond the ordinary, igniting the flames of desire and forging a connection that's as hot as it is profound. Let the seduction of deepening your relationship begin!

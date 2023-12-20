@@ -4,10 +4,10 @@
 cd /Users/schappetj/git/quartz 
 npx quartz build -d ../Recipes/ 
 
-cp -r ../quartz/public  public/recipes 
-
-
 cd /Users/schappetj/git/teatime-starter 
+rm -rf public/recipes
+cp -r ../quartz/public  public/recipes
+
 . ~/.pass_list
 
 

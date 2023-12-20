@@ -6,8 +6,7 @@ Welcome to "ReVillage Society," where we invite you to embark on a journey perso
 
 ### Our Vision
 
-We believe that community is a practice. 
-
+We believe that community is a practice.
 
 Our vision is simple yet profound: to empower individuals, couples and community to embrace their authentic selves, awaken their desires, and create the lives they truly desire. We believe that through the fusion of sacred sexuality and conscious manifestation, a world of boundless possibilities awaits.
 
@@ -26,13 +25,3 @@ Our mission is to share our experiences, insights, and practices with you. We wa
 We invite you to explore the pages of "Erotic Couples Manifesting" and connect with us on this transformative journey. Whether you're seeking to reignite passion in your relationship, discover your true self, or simply want to live life with intention, we're here to support and inspire you every step of the way.
 
 Thank you for being part of our community. Together, let's redefine the boundaries of pleasure, manifest our desires, and celebrate the beauty of sexual freedom.
-
-
-
-- sexual freedom
-- conscious manifestation
-- personal transformation
-- authentic selves
-- sacred sexuality
-- boundless possibilities
-- self-discovery

@@ -12,6 +12,6 @@ layout: base.njk
 
 <ul>
 {%- for blog in collections.blog -%}
-  <li><a href="{{ blog.url }}">{{ blog.data.title }}</a> <br>{{ blog.data.desc }}</li>
+  <li><a href="{{ blog.url }}">{{ blog.data.title }}</a> <br>{{ blog.data.description }}</li>
 {%- endfor -%}
 </ul>

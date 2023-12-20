@@ -2,7 +2,7 @@
 tags: blog
 layout: page.njk
 title: New Page Content
-desc: 
+desc: This is a sample new Page
 ---
 
-## New Page Content 
+## New Page Content

@@ -1,0 +1,39 @@
+---
+title: Wheel of the Year Festivals
+layout: base.njk
+description: Festivals we celebrate each season as we pass through the year.
+---
+
+<header>
+  {% include "navbar.njk" %}
+</header>
+<h1>{{ title }}</h1>
+    <div class="section">
+        <div class="container">
+            <div class="section-heading-wrap">
+                {# <div class="label cc-light">
+                    {{ title }}
+                    <br/>
+                </div> #}
+                <h2>
+                    {{ description }}
+                    <br/>
+                </h2>
+            </div>
+            <div class="w-layout-grid festivals">
+              {%- for page in collections.festival -%}
+                <div>
+                    <div class="festivals-pic">
+                      <a href="{{ page.url }}">
+                        <img src="{{page.data.keyimage}}" />
+                        </a>
+                    </div>
+                    <div class="team-member-title-wrap">
+                        <div class="team-member-name"><a href="{{ page.url }}">{{ page.data.title }}</a></div>
+                        <div class="paragraph-light">{{ page.data.description }}</div>
+                    </div>
+                </div>
+              {%- endfor -%}
+            </div>
+        </div>
+    </div>

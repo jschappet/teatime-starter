@@ -4,7 +4,7 @@
 <link rel="preload" href="/css/page.css" as="style">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{{ pageTitle or title }} - {{ site.title }}</title>
-<meta name="description" content="{{ description or site.description }}">
+<meta name="description" content="{{ page.data.description or site.description }}">
 <meta name="author" content="{{ site.author }}">
 <meta name="robots" content="index,follow">
 <!-- Social Metadata -->
@@ -13,8 +13,12 @@
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ absolutePageUrl }}">
-<meta property="og:image" content="{{ site.image | url | absoluteUrl(env.url) }}">
+<meta property="og:image" content="{{ keyimage | url | absoluteUrl(env.url) }}">
+<link rel="canonical" href={{ "{ page.url }" | escape }}/>
+
 <meta name="theme-color" content="#ffffff">
+
+
 {% favicon './src/static/img/logo.png' %}
 <link rel="stylesheet" href="/css/page.css">
 <script defer src="/js/alpine.js"></script>
