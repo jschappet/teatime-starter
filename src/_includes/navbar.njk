@@ -1,3 +1,34 @@
+<div class="container">
+  <a aria-label="Home" href="/" class="relative inline transition-all duration-500 delay-300 transform opacity-0 hover:no-underline -left-10" x-init="$el.classList.add('translate-x-8');$el.classList.add('opacity-100')">
+    <img src="/img/logo.png" alt="tea logo" class="m-1" height="40px" width="40px">
+  </a>
+  <nav class="primary-navigation">
+    <ul role="list" class="nav-list"> 
+      <li>
+       <a href="{% if isFront %}#about{% else %}{{ env.url }}/#about{% endif %}">About</a>
+      </li>
+      <li>
+       <a href="{% if isFront %}#contact{% else %}{{ env.url }}/#contact{% endif %}">Contact Us</a>
+      </li>
+      <li>
+       <a href="/recipes/">Cook Book</a>
+      </li>
+      {% for item in site.social %}
+      <li>
+        <a href="{{ item.url }}" target="_blank" rel="_noopener"><img class="hover:opacity-60"
+              src="{{ item.image }}" alt="{{item.name}} logo"  height="24px" width="24px"></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <button class="button">Get Started</button>
+
+</div>
+
+
+{# 
+
+
 <nav id="header"
   class="flex flex-col items-center justify-between w-full px-4 py-1 bg-white shadow sm:flex-row sm:px-6 sm:bg-transparent sm:shadow-none">
   <div id="menuHeader"
@@ -32,4 +63,4 @@
     <div class="progress-bar" id="progressBar"></div>
   </div>
 </nav>
-<div id="header-filler"></div>
+<div id="header-filler"></div> #}

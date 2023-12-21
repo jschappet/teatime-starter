@@ -4,10 +4,11 @@ layout: base.njk
 description: Festivals we celebrate each season as we pass through the year.
 ---
 
-<header>
+<header class="primary-header">
   {% include "navbar.njk" %}
 </header>
-<h1>{{ title }}</h1>
+<main id="{{ title }}" class="flex flex-col items-center justify-center w-full">
+
     <div class="section">
         <div class="container">
             <div class="section-heading-wrap">
@@ -37,3 +38,4 @@ description: Festivals we celebrate each season as we pass through the year.
             </div>
         </div>
     </div>
+  </main>

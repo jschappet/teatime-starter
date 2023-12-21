@@ -1,297 +1,196 @@
+:root {
+
+  --clr-accent-400: hsl(12, 88%, 59%);
+  --clr-accent-100: hsl(13, 100%, 96%);
+ 
+  --clr-primary-100: hsl(228, 88%, 59%);
+  --clr-primary-400: hsl(228, 39%, 23%);
+
+  --clr-secondary-100: hsl(232, 12%, 13%);
+  --clr-secondary-900: hsl(0, 15%, 6%);
+
+  --ff-primary: font-family: 'Be Vietnam Pro', sans-serif; 
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: .9rem;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-900: 2.75rem;
+
+
+  --fs-body: var(--fs-400); 
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+
+  --fs-nav: var(--fs-400); 
+  --fs-button: var(--fs-300)
+
+
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    
+    --fs-body: var(--fs-400); 
+    --fs-nav: var(--fs-300); 
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+
+  }
+}
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-  scroll-behavior: smooth;
+  box-sizing: border-box;
+
 }
 
-*:hover {
-  transition: all 400ms ease;
-}
-
+/* Prevent font size inflation */
 html {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  height: -webkit-fill-available;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  padding: 0;
+  font: inherit; 
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html,
 body {
-  height: -webkit-fill-available;
+  height:  100%;
 }
 
-ol {
-  padding: revert !important;
+/* Set core body defaults */
+body {
+  line-height: 1.5;
 }
 
-/* Header */
-#header {
-  background-color: black;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
 }
 
-#header-filler {
-  height: 60px;
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
 }
 
-main > div {
-  scroll-margin-top: 60px;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
-/* Scrollbar */
-@media (min-width: 576px) {
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #f5f7fa;
-  }
-
-  body::-webkit-scrollbar {
-    width: 6px;
-    background-color: #f5f7fa;
-  }
-
-  body::-webkit-scrollbar-thumb {
-    background-color: grey;
-  }
-}
-
-/* Scroll indicator */
-.progress-container {
-  position: fixed;
-  left: 0;
-  top: 55px;
-  width: 100%;
-  height: 5px;
-  background: whiteSmoke;
-}
-
-.progress-bar {
-  height: 5px;
-  background: theme('colors.customRed');
-  width: 0%;
-}
-
-/* Responsive navigation */
-.hamburger {
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  transition: all 0.25s;
-}
-
-.hamburger__top-bun,
-.hamburger__bottom-bun {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background: theme('colors.customRed');
-  transform: rotate(0);
-  transition: all 0.5s;
-}
-
-.hamburger:hover [class*="-bun"] {
-  background: theme('colors.customRed');
-}
-
-.hamburger__top-bun {
-  transform: translateY(-5px);
-}
-
-.hamburger__bottom-bun {
-  transform: translateY(3px);
-}
-
-.open {
-  transform: rotate(90deg);
-  transform: translateY(-1px);
-}
-
-.open .hamburger__top-bun {
-  transform: rotate(45deg) translateY(0px);
-}
-
-.open .hamburger__bottom-bun {
-  transform: rotate(-45deg) translateY(0px);
-}
-
-@keyframes change {
-  0%,
-  7.14%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  14.28% {
-    transform: translate3d(0, -15%, 0);
-  }
-  21.42% {
-    transform: translate3d(0, -35%, 0);
-  }
-  28.57% {
-    transform: translate3d(0, -50%, 0);
-  }
-  42.85% {
-    transform: translate3d(0, -70%, 0);
-  }
-  53.5% {
-    transform: translate3d(0, -85%, 0);
-  }
-  64.28% {
-    transform: translate3d(0, -70%, 0);
-  }
-  71.42% {
-    transform: translate3d(0, -50%, 0);
-  }
-  85.71% {
-    transform: translate3d(0, -35%, 0);
-  }
-  92.85% {
-    transform: translate3d(0, -15%, 0);
-  }
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
 }
 
 
 
-
-.contact_us {
-  display: grid;
-  gap: 1.5rem; 
-  grid-template-columns: repeat(3, 1fr);
-  /* 
-  grid-template-rows: 1fr;
-  
-  grid-column-gap: 30px; 
-  grid-row-gap: 10px;
-  */
-  width: min(95%, 70rem);
-  margin-inline: auto; 
-
-  }
-
-.div1 { 
-  grid-area: 1 / 1 / 2 / 2; 
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
 }
-.div2 { 
-  grid-area: 1 / 2 / 2 / 3; 
-}
-.div3 { 
-  grid-area: 1 / 3 / 2 / 4; 
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
 
 
-
-
-
-/* Copied from WebFlow */
-.w-layout-grid {
-  grid-row-gap: 16px;
-  grid-column-gap: 16px;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: grid;
+*::before,
+*::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
 
-.festivals {
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "One Two Three";
-  /* grid-template-areas: ". . ."
-                       ". . .";
-   */
-   margin-bottom: 60px;
+/* Utility classes */ 
+
+.text-primary-400 {
+  color: var(--clr-primary-400);
 }
 
-.festivals-title-wrap {
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
-  display: flex;
+.text-accent-400 {
+  color: var(--clr-accent-400);
 }
 
-.festivals-name {
-  opacity: 1;
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34px;
+.text-accent-100 {
+  color: var(--clr-accent-100);
 }
 
-.festivals-pic {
-  width: 100%;
-  height: 420px;
-  background-color: #f4f4f4;
-  margin-bottom: 40px;
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
 }
 
 
-.festivals-pic {
-  height: 300px;
-  margin-bottom: 30px;
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
 }
 
-.festivals-name {
-  font-size: 16px;
-  line-height: 28px;
+.bg-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+
+.bg-accent-100 {
+  background-color: var(--clr-accent-100);
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
 }
 
 
-@media screen and (max-width: 479px) {
-  h1 {
-    font-size: 36px;
-    line-height: 52px;
-  }
+.fw-bold { font-weight: var(--fw-bold);}
+.fw-semi-bold { font-weight: var(--fw-semi-bold);}
+.fw-regular { font-weight: var(--fw-regular);}
 
-  .rich-text {
-    width: 100%;
-    max-width: none;
-  }
-
-  .heading-jumbo {
-    font-size: 36px;
-    line-height: 48px;
-  }
-
-  .menu {
-    margin-left: 15px;
-  }
-
-  .navigation {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .menu-button, .menu-button.w--open {
-    flex: none;
-  }
-
-  .cta-wrap {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .status-message.cc-no-data, .contact-form-grid {
-    width: 100%;
-  }
-
-  .our-contacts {
-    width: 90%;
-  }
-
-  .festivals {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .project-details-grid {
-    width: 100%;
-  }
-
-  .blog-detail-header-wrap, .blog-item {
-    width: 100%;
-    max-width: none;
-  }
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
 }
+
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+/* Utility classes */ 
+
+ .fs-300 { font-size: var(--fs-300); }
+
+ .fs-400 { font-size: var(--fs-400); }
+ .fs-500 { font-size: var(--fs-500); }
